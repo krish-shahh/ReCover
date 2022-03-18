@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="search.css"/>
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+<script src="search.js" async defer></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Sponsor</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="search.html">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="resources.html">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        
+      </ul>
+      
+      <div class="mx-2">
+        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#loginModal">Login</button>
+      </div>
+    </div>
+    
+  </nav>
+  <ul></ul>
+
+<input type="text" id="myInput" onkeyup="filterAlgo()" placeholder="Type In Your Addiction..." title="Type In Your Addiction...">
+
+<ul id="myUL">
+  <div class="row">
+    <li class="column">
+      <div class="card">
+        <img src="https://www.pinclipart.com/picdir/big/379-3796154_profile-clipart-john-doe-circle-png-download.png" alt="Jane" style="width:100%">
+        <div class="container">
+          <h2>Jane Doe</h2>
+          <p class="title">Years Sober: </p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>Addiction History: <a href="#" style="color: black; font-size: 22px; text-decoration: none;">Alcohol</a></p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </li>
+  
+    <li class="column">
+      <div class="card">
+        <img src="https://www.pinclipart.com/picdir/big/379-3796154_profile-clipart-john-doe-circle-png-download.png" alt="Mike" style="width:100%">
+        <div class="container">
+          <h2>Mike Ross</h2>
+          <p class="title">Years Sober: </p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>Addiction History: <a href="#" style="color: black; font-size: 22px; text-decoration: none;">Crack</a></p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </li>
+  
+    <li class="column">
+      <div class="card">
+        <img src="https://www.pinclipart.com/picdir/big/379-3796154_profile-clipart-john-doe-circle-png-download.png" alt="John" style="width:100%">
+        <div class="container">
+          <h2>John Doe</h2>
+          <p class="title">Years Sober: </p>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <p>Addiction History: <a href="#" style="color: black; font-size: 22px; text-decoration: none;">Heroin</a></p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </li>
+  <!--
+	<li class="card">
+        <div>
+          <img src="https://www.pinclipart.com/picdir/big/379-3796154_profile-clipart-john-doe-circle-png-download.png" alt="John" style="width:100%">
+          <h1>John Doe</h1>
+          <p class="title">Years Sober: </p>
+          <p>Addiction History:<a href="#">Alcohol</a></p>
+          <a href="#"><i class="fa fa-dribbble"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <p><button>Contact</button></p>
+        </div>
+     </li>
+  <li class="card">
+       <div>
+        <img src="https://www.pinclipart.com/picdir/big/379-3796154_profile-clipart-john-doe-circle-png-download.png" alt="John" style="width:100%">
+        <h1>Adele Doe</h1>
+        <p class="title">Years Sober: </p>
+        <p>Addiction History:<a href="#">Crack</a></p>
+        <a href="#"><i class="fa fa-dribbble"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <p><button>Contact</button></p>
+    </div>
+    </li>
+    -->
+    
+</ul>
+
+</body>
+</html>
