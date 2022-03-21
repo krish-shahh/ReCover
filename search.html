@@ -15,6 +15,12 @@
       crossorigin="anonymous"
     />
 <script src="search.js" async defer></script>
+<script src="submission.js" async defer></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase.js"></script>
 <title>ReCover | Search</title>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G7KDHT9Q58"></script>
@@ -76,8 +82,106 @@
 
 <input type="text" id="myInput" onkeyup="filterAlgo()" placeholder="Type In Your Addiction..." title="Type In Your Addiction...">
 
+<!--
+<div class="container">
+<table class="table">
+  <tbody id="tbody1">
+      <thead>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Email</th>
+        <th>Year Sober</th>
+        <th>Addiction History</th>
+        
+        <th>Biography</th>
+        <th>Profile Image</th>
+      </thead>
+      <img src="" alt="" id="imgProfile">
+
+
+  </tbody>
+</table>
+</div>
+-->
+
+<!--
+<script>
+
+var config = {
+  apiKey: "AIzaSyBTXau4kL7Z2rz3CcDsaR9ewkM_OkUooL0",
+  authDomain: "protestsite.firebaseapp.com",
+  databaseURL: "https://protestsite-default-rtdb.firebaseio.com",
+  projectId: "protestsite",
+  storageBucket: "protestsite.appspot.com",
+  messagingSenderId: "610238828062"
+};
+
+firebase.initializeApp(config);
+
+function selectAllData() {
+  firebase.database().ref('messages').on('value', function(allRecords) {
+      allRecords.forEach(function(CurrentRecord) {
+          var nameOfSponsor = CurrentRecord.val().name;
+          var locationOfSponsor = CurrentRecord.val().location;
+          var emailOfSponsor = CurrentRecord.val().email;
+          var addictionOfSponsor = CurrentRecord.val().years;
+          var historyOfSponsor = CurrentRecord.val().history;
+          var profileOfSponsor = CurrentRecord.val().profile;
+          var messageOfSponsor = CurrentRecord.val().message;
+          addItemtoTable(nameOfSponsor, locationOfSponsor, emailOfSponsor, addictionOfSponsor, historyOfSponsor, profileOfSponsor, messageOfSponsor);
+
+      });
+  });
+}
+
+window.onload = selectAllData;
+
+function addItemtoTable(nameOfSponsor, locationOfSponsor, emailOfSponsor, addictionOfSponsor, historyOfSponsor, profileOfSponsor, messageOfSponsor) {
+  var tbody = document.getElementById('tbody1');
+  var trow = document.createElement('tr');
+  var td1 = document.createElement('td');
+  var td2 = document.createElement('td');
+  var td3 = document.createElement('td');
+  var td4 = document.createElement('td');
+  var td5 = document.createElement('td');
+  var td6 = document.getElementById('imgProfile');
+  var td7 = document.createElement('td');
+  var td8 = document.createElement('td');
+
+  td1.innerHTML = nameOfSponsor;
+  td2.innerHTML = locationOfSponsor;
+  td3.innerHTML = emailOfSponsor;
+  td4.innerHTML = addictionOfSponsor;
+  td5.innerHTML = historyOfSponsor;
+  td6.src = profileOfSponsor;
+  td8.innerHTML = profileOfSponsor;
+  td7.innerHTML = messageOfSponsor;
+
+  trow.appendChild(td1);
+  trow.appendChild(td2);
+  trow.appendChild(td3);
+  trow.appendChild(td4);
+  trow.appendChild(td5);
+  trow.appendChild(td6);
+  trow.appendChild(td7);
+  tbody.appendChild(trow);
+}
+
+document.getElementById('retrieve').onclick = function(){
+
+}
+
+</script>
+-->
+
+
+
+
+
+
+<!--
 <ul id="myUL">
-  <!--
+
   <div class="row">
     <li class="column">
       <div class="card">
@@ -159,9 +263,10 @@
         <p><button>Contact</button></p>
     </div>
     </li>
-    -->
+    
     
 </ul>
+-->
 
 </body>
 </html>

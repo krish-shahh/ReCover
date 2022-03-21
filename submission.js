@@ -9,6 +9,24 @@ var config = {
 };
 firebase.initializeApp(config);
 
+document.getElementById('profile').addEventListener('change', (event) => {
+  const file = event.target.files[0];
+  const storageRef = firebase.storage().ref('images/' + file.name);
+
+  storageRef.put(file).on('state_changed', (snapshot) => {
+      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      console.log(progress);
+      const progressBar = document.getElementById('progress_bar');
+      progressBar.value = progress;
+  });
+
+  storageRef.getDownloadURL().then(function(url){
+    const image = document.getElementById('image');
+    console.log(url);
+    image.src = url
+  });
+});
+
 // Reference messages collection
 var messagesRef = firebase.database().ref('messages');
 
@@ -16,6 +34,7 @@ var messagesRef = firebase.database().ref('messages');
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 
 // Submit form
+/*
 function uploadFile() {
   const ref = firebase.storage().ref();
   const file = document.querySelector("#profile").files[0];
@@ -28,6 +47,7 @@ function uploadFile() {
   task
     .then(snapshot => snapshot.ref.getDownloadURL())
 }
+*/
 
 function submitForm(e){
   e.preventDefault();
